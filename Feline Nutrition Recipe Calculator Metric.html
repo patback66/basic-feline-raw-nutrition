@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<!-- saved from url=(0112)https://web.archive.org/web/20211207192540/https://feline-nutrition.org/html_pages/Recipe_Calculator_Metric.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><div id="twoseven-scripts" data-info="Scripts added by TwoSeven extension" style="display: none !important; position: static !important; top: 0px !important; left: 0px !important; width: 0px !important; height: 0px !important;"><script type="text/javascript" id="__tmpScript-272712434" data-added-by-two-seven="1">(function() {
+        window.twoseven = window.twoseven || {};
+      })();</script><script type="text/javascript" id="__tmpScript-115764455" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForDOMNode = async function t(e,t=document){e=e||{};const{type:n,value:o}=e;if(!n||!o)throw new Error("Must specify identifier");let s=o;switch(n){case"tag":s=o.toUpperCase()}if("check"!==n){const e=i({type:"selector",value:s},[],t);if(e)return new Promise(t=>t(e))}function i({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t)}return s}async function a({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t);break;case"check":for(const e of n){if(await t(e))return e}}return s}return new Promise((e,o)=>{const r=new MutationObserver(async o=>{for(const w of o)if("childList"===w.type){const o=Array.from(w.addedNodes);let d;if(d="check"===n?await a({type:n,value:s},o,t):await i({type:n,value:s},o,t))return r.disconnect(),e(d)}});r.observe(t,{childList:!0,subtree:!0})})};
+      })();</script><script type="text/javascript" id="__tmpScript-747509706" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.reportError = function n(e,t,n){"string"==typeof(n=n||{})&&(n={message:n});const{message:o,stack:s}=t;Object.assign(n,{tag:e,error:{message:o,stack:s}}),window.tsExtGetPostToParent()({name:name,tag:e,action:"report-error",json:n}),console.error(JSON.stringify(n.error))}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-849332986" data-added-by-two-seven="1">(function() {
+        
+    window.twosevenHmsToSecondsOnly = function(str) {
+        var p = str.split(':'),
+            s = 0, m = 1;
+
+        while (p.length > 0) {
+            s += m * parseInt(p.pop(), 10);
+            m *= 60;
+        }
+
+        return s;
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-803543528" data-added-by-two-seven="1">(function() {
+        window.twosevenExtLog = function(e,o,c){o||(o=e,e=void 0);let n=c||"black";if(c)switch(c){case"success":n="Green";break;case"info":n="DodgerBlue";break;case"error":n="Red";break;case"warning":n="Orange";break;default:n=c}e?console.log("%c"+e+": "+o,`color:${n}`):console.log("%c"+o,`color:${n}`)};
+      })();</script><script type="text/javascript" id="__tmpScript-281828446" data-added-by-two-seven="1">(function() {
+        
+    document.twosevenGET = function(url, callback) {
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+          if (xmlhttp.status == 200) {
+            callback(null, xmlhttp.responseText);
+          } else {
+            callback('something else other than 200 was returned', '');
+          }
+        }
+      };
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    };
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-11078301" data-added-by-two-seven="1">(function() {
+        
+    window.triggerEvent = function(e,t,n,o=!1){let s;o?(n&&"string"!=typeof n&&(n=JSON.stringify(n)),s=n):s={data:n},window.twosevenScriptsDiv&&n&&"object"==typeof n&&(console.warn(`WARNING: Attempting to send an object via event.detail from CS->Page does not work on Firefox: ${JSON.stringify(n)}`),console.error((new Error).stack));var i=new CustomEvent(t,{bubbles:!0,composed:!0,detail:s});e.dispatchEvent(i)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-154427817" data-added-by-two-seven="1">(function() {
+        window.twoseven.postTo = async function o(e,t,n=!1){let o;return t.name=t.name||name,o=n?new Promise(e=>{const n=`ack-${t.action}-${1e9*Math.random()|0}`;t.ack={event:n};window.debug&&["play","pause","currentTime"].some(e=>t.action.includes(e)),window.addEventListener("message",function t({data:o={}}){o.action===n&&(window.removeEventListener("message",t),e(o.json))})}):new Promise(e=>e()),e.postMessage(t,"*"),o};
+      })();</script><script type="text/javascript" id="__tmpScript-616382327" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostTo = function s(){return window.twoseven&&window.twoseven.postTo||window.postTo};
+      })();</script><script type="text/javascript" id="__tmpScript-979032189" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostToParent = function i(){return window.twoseven&&window.twoseven.postToParent||window.postToParent};
+      })();</script><script type="text/javascript" id="__tmpScript-502386439" data-added-by-two-seven="1">(function() {
+        window.twoseven.postResponse = async function a(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-794670902" data-added-by-two-seven="1">(function() {
+        window.postResponse = async function a(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-700006362" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToParent = async function r(e,t=!1){return window.tsExtGetPostTo()(window.parent,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-73103239" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-224835705" data-added-by-two-seven="1">(function() {
+        window.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-994939307" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.getFromStorage = e=>new Promise((t,n)=>{const o="get-from-storage-"+(1e9*Math.random()|0);window.addEventListener(o,e=>{window.removeEventListener(o,this);const{detail:{data:{value:n}}}=e;t(n)}),triggerEvent(window,"get-from-storage",{key:e,evt:o})})
+    window.twoseven.saveToStorage = e=>{triggerEvent(window,"save-to-storage",e)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-610727948" data-added-by-two-seven="1">(function() {
+        
+    window.attachHistoryListeners = function d(){var e=history.pushState;history.pushState=function(t,n,o){return"function"==typeof history.onpushstate&&history.onpushstate({state:t}),triggerEvent(window,"pushstate",{uri:o}),e.apply(history,arguments)};var t=history.replaceState;history.replaceState=function(e){return"function"==typeof history.onreplacestate&&history.onreplacestate({state:e}),t.apply(history,arguments)}}
+    window.attachHistoryListeners()
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-326289319" data-added-by-two-seven="1">(function() {
+        window.twoseven.once = function c(e,t,n){e.addEventListener(t,function o(s){e.removeEventListener(t,o),n(s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-278815690" data-added-by-two-seven="1">(function() {
+        window.nextTick = function v(){return new Promise(e=>setTimeout(e,0))};
+      })();</script><script type="text/javascript" id="__tmpScript-843520374" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isOnTwoSevenTab = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'is-on-twoseven-tab' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-812845021" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isPaused = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'twoseven:pause-state' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-827669361" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForProp = function u(e,t,n){return new Promise(o=>{if(e[t])return void o();const s=setInterval(()=>{e[t]&&(clearInterval(s),o())},n)})};
+      })();</script><script type="text/javascript" id="__tmpScript-246869830" data-added-by-two-seven="1">(function() {
+        window.twoseven.overrideMethod = function g(e,t,n){const o=e[t].bind(e);e[t]=async function(...e){return await n(...e),o(...e)}};
+      })();</script><script type="text/javascript" id="__tmpScript-792294639" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoTimeUpdate = function p(e,t=3){return new Promise(n=>{let o=0;const s=()=>{++o===t&&(e.removeEventListener("timeupdate",s),n())};e.addEventListener("timeupdate",s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-907929076" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoReadyState = function l(e,t,n=30){return t(e.readyState)?Promise.resolve():new Promise(o=>{const s=setInterval(()=>{t(e.readyState)&&(clearInterval(s),o())},n)})};
+      })();</script><script type="text/javascript" id="__tmpScript-935057259" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoToHaveFutureData = function m(e,...t){return window.twoseven.waitForVideoReadyState(e,e=>e>=3,...t)};
+      })();</script><script type="text/javascript" id="__tmpScript-475748339" data-added-by-two-seven="1">(function() {
+        window.twoseven = window.twoseven || {};
+      })();</script><script type="text/javascript" id="__tmpScript-213374323" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForDOMNode = async function t(e,t=document){e=e||{};const{type:n,value:o}=e;if(!n||!o)throw new Error("Must specify identifier");let s=o;switch(n){case"tag":s=o.toUpperCase()}if("check"!==n){const e=i({type:"selector",value:s},[],t);if(e)return new Promise(t=>t(e))}function i({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t)}return s}async function a({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t);break;case"check":for(const e of n){if(await t(e))return e}}return s}return new Promise((e,o)=>{const r=new MutationObserver(async o=>{for(const w of o)if("childList"===w.type){const o=Array.from(w.addedNodes);let d;if(d="check"===n?await a({type:n,value:s},o,t):await i({type:n,value:s},o,t))return r.disconnect(),e(d)}});r.observe(t,{childList:!0,subtree:!0})})};
+      })();</script><script type="text/javascript" id="__tmpScript-67628069" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.reportError = function n(e,t,n){"string"==typeof(n=n||{})&&(n={message:n});const{message:o,stack:s}=t;Object.assign(n,{tag:e,error:{message:o,stack:s}}),window.tsExtGetPostToParent()({name:name,tag:e,action:"report-error",json:n}),console.error(JSON.stringify(n.error))}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-242355954" data-added-by-two-seven="1">(function() {
+        
+    window.twosevenHmsToSecondsOnly = function(str) {
+        var p = str.split(':'),
+            s = 0, m = 1;
+
+        while (p.length > 0) {
+            s += m * parseInt(p.pop(), 10);
+            m *= 60;
+        }
+
+        return s;
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-773002614" data-added-by-two-seven="1">(function() {
+        window.twosevenExtLog = function(e,o,c){o||(o=e,e=void 0);let n=c||"black";if(c)switch(c){case"success":n="Green";break;case"info":n="DodgerBlue";break;case"error":n="Red";break;case"warning":n="Orange";break;default:n=c}e?console.log("%c"+e+": "+o,`color:${n}`):console.log("%c"+o,`color:${n}`)};
+      })();</script><script type="text/javascript" id="__tmpScript-126833421" data-added-by-two-seven="1">(function() {
+        
+    document.twosevenGET = function(url, callback) {
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+          if (xmlhttp.status == 200) {
+            callback(null, xmlhttp.responseText);
+          } else {
+            callback('something else other than 200 was returned', '');
+          }
+        }
+      };
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    };
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-501245069" data-added-by-two-seven="1">(function() {
+        
+    window.triggerEvent = function(e,t,n,o=!1){let s;o?(n&&"string"!=typeof n&&(n=JSON.stringify(n)),s=n):s={data:n},window.twosevenScriptsDiv&&n&&"object"==typeof n&&(console.warn(`WARNING: Attempting to send an object via event.detail from CS->Page does not work on Firefox: ${JSON.stringify(n)}`),console.error((new Error).stack));var i=new CustomEvent(t,{bubbles:!0,composed:!0,detail:s});e.dispatchEvent(i)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-492448075" data-added-by-two-seven="1">(function() {
+        window.twoseven.postTo = async function o(e,t,n=!1){let o;return t.name=t.name||name,o=n?new Promise(e=>{const n=`ack-${t.action}-${1e9*Math.random()|0}`;t.ack={event:n};window.debug&&["play","pause","currentTime"].some(e=>t.action.includes(e)),window.addEventListener("message",function t({data:o={}}){o.action===n&&(window.removeEventListener("message",t),e(o.json))})}):new Promise(e=>e()),e.postMessage(t,"*"),o};
+      })();</script><script type="text/javascript" id="__tmpScript-683132805" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostTo = function s(){return window.twoseven&&window.twoseven.postTo||window.postTo};
+      })();</script><script type="text/javascript" id="__tmpScript-36511999" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostToParent = function i(){return window.twoseven&&window.twoseven.postToParent||window.postToParent};
+      })();</script><script type="text/javascript" id="__tmpScript-797061851" data-added-by-two-seven="1">(function() {
+        window.twoseven.postResponse = async function a(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-42521215" data-added-by-two-seven="1">(function() {
+        window.postResponse = async function a(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-896804587" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToParent = async function r(e,t=!1){return window.tsExtGetPostTo()(window.parent,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-468136620" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-576731921" data-added-by-two-seven="1">(function() {
+        window.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-370837656" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.getFromStorage = e=>new Promise((t,n)=>{const o="get-from-storage-"+(1e9*Math.random()|0);window.addEventListener(o,e=>{window.removeEventListener(o,this);const{detail:{data:{value:n}}}=e;t(n)}),triggerEvent(window,"get-from-storage",{key:e,evt:o})})
+    window.twoseven.saveToStorage = e=>{triggerEvent(window,"save-to-storage",e)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-777011995" data-added-by-two-seven="1">(function() {
+        
+    window.attachHistoryListeners = function d(){var e=history.pushState;history.pushState=function(t,n,o){return"function"==typeof history.onpushstate&&history.onpushstate({state:t}),triggerEvent(window,"pushstate",{uri:o}),e.apply(history,arguments)};var t=history.replaceState;history.replaceState=function(e){return"function"==typeof history.onreplacestate&&history.onreplacestate({state:e}),t.apply(history,arguments)}}
+    window.attachHistoryListeners()
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-995803761" data-added-by-two-seven="1">(function() {
+        window.twoseven.once = function c(e,t,n){e.addEventListener(t,function o(s){e.removeEventListener(t,o),n(s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-309301789" data-added-by-two-seven="1">(function() {
+        window.nextTick = function v(){return new Promise(e=>setTimeout(e,0))};
+      })();</script><script type="text/javascript" id="__tmpScript-347156156" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isOnTwoSevenTab = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'is-on-twoseven-tab' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-221896670" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isPaused = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'twoseven:pause-state' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-728519541" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForProp = function u(e,t,n){return new Promise(o=>{if(e[t])return void o();const s=setInterval(()=>{e[t]&&(clearInterval(s),o())},n)})};
+      })();</script><script type="text/javascript" id="__tmpScript-928799919" data-added-by-two-seven="1">(function() {
+        window.twoseven.overrideMethod = function g(e,t,n){const o=e[t].bind(e);e[t]=async function(...e){return await n(...e),o(...e)}};
+      })();</script><script type="text/javascript" id="__tmpScript-66442760" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoTimeUpdate = function p(e,t=3){return new Promise(n=>{let o=0;const s=()=>{++o===t&&(e.removeEventListener("timeupdate",s),n())};e.addEventListener("timeupdate",s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-33641452" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoReadyState = function l(e,t,n=30){return t(e.readyState)?Promise.resolve():new Promise(o=>{const s=setInterval(()=>{t(e.readyState)&&(clearInterval(s),o())},n)})};
+      })();</script><script type="text/javascript" id="__tmpScript-674621666" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoToHaveFutureData = function m(e,...t){return window.twoseven.waitForVideoReadyState(e,e=>e>=3,...t)};
+      })();</script><script type="text/javascript" id="__tmpScript-831651859" data-added-by-two-seven="1">(function() {
+        
+      const modal = document.querySelector('.twoseven-ext-tab-media-modal')
+      const modalCloseBtn = modal.querySelector('.close')
+      function closeModal () {
+        modal.style.display = 'none'
+        const frame = document.querySelector('#twoseven-ext-tab-media-iframe').contentWindow
+        frame.postMessage({
+          __evt_name: 'modal-hide'
+        }, '*')
+      }
+      modalCloseBtn.onclick = closeModal
+
+      window.onmessage = function (e) {
+        if (e.data.__evt_name === 'modal-hide') {
+          closeModal()
+        }
+      }
+
+      window.twoseven.closeTabMediaModal = closeModal
+
+      window.onclick = function (e) {
+        if (e.target.id === 'twoseven-ext-tab-media-modal' && modal.style.display === 'block') {
+            closeModal()
+        }
+      }
+    ;
+      })();</script></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Feline Nutrition Recipe Calculator Metric_files/analytics.js.download" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app223.us.archive.org';v.server_ms=222;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./Feline Nutrition Recipe Calculator Metric_files/bundle-playback.js.download" charset="utf-8"></script>
+<script type="text/javascript" src="./Feline Nutrition Recipe Calculator Metric_files/wombat.js.download" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://feline-nutrition.org/html_pages/Recipe_Calculator_Metric.html","20211207192540","https://web.archive.org/","web","/_static/",
+	      "1638905140");
+</script>
+<link rel="stylesheet" type="text/css" href="./Feline Nutrition Recipe Calculator Metric_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Feline Nutrition Recipe Calculator Metric_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<title>Feline Nutrition Recipe Calculator Metric</title>
+
+<meta name="keywords" content="homemade, raw, cat, food, recipe, calculator, metric">
+<meta name="description" content="Feline Nutrition&#39;s Metric Recipe Calculator figures out the proportions of all ingredients based on the amount of meat.">
+<link rel="shortcut icon" type="image/x-icon" href="https://web.archive.org/web/20211207192540im_/https://feline-nutrition.org/html_pages/favicon.ico">
+
+
+<link href="https://web.archive.org/web/20211207192540/https://feline-nutrition.org/html_pages/Recipe_Calculator.html" rel="canonical">
+<meta name="viewport" content="initial-scale=1.0">
+
+<meta name="GENERATOR" content="SpreadsheetConverter to HTML/JavaScript version 4.6.0 (build 1136)">
+<!-- SpreadsheetConverter Header start -->
+<!-- Parts of this page Copyright (C) 2002-2008 Framtidsforum I&M AB, Sweden -->
+
+<style type="text/css"> /* Styles needed by SpreadsheetConverter */
+
+.eebuttons {width:120px}*.ee100 { color : windowtext; font-family : Arial; font-size : 10.00pt; 
+font-style : normal; font-weight : 400; padding-left : 1px; 
+padding-right : 1px; padding-top : 1px; text-align : left; 
+vertical-align : bottom }
+*.ee103 { color : windowtext; font-family : "Times New Roman" , serif; 
+font-size : 10.00pt; font-style : normal; font-weight : 400; 
+padding-left : 1px; padding-right : 1px; padding-top : 1px; 
+text-align : left; vertical-align : bottom }
+*.ee106 { color : windowtext; font-family : "Times New Roman" , serif; 
+font-size : 12.00pt; font-style : normal; font-weight : 400; 
+padding-left : 1px; padding-right : 1px; padding-top : 1px; 
+text-align : left; vertical-align : bottom }
+*.ee109 { color : windowtext; font-family : Arial , sans-serif; 
+font-size : 14.00pt; font-style : normal; font-weight : 700; 
+padding-left : 1px; padding-right : 1px; padding-top : 1px; 
+text-align : left; vertical-align : bottom }
+*.ee115 { background : #F6DDAC; color : windowtext; 
+font-family : Arial , sans-serif; font-size : 10.00pt; font-style : normal; 
+font-weight : 400; padding-left : 1px; padding-right : 1px; 
+padding-top : 1px; text-align : left; vertical-align : bottom }
+*.ee118 { background : #FFFFEB; color : windowtext; 
+font-family : Arial , sans-serif; font-size : 10.00pt; font-style : normal; 
+font-weight : 400; padding-left : 0px; padding-right : 1px; 
+padding-top : 0px; text-align : center; vertical-align : bottom }
+*.ee120 { background : #FFFFEB; color : windowtext; 
+font-family : Arial , sans-serif; font-size : 10.00pt; font-style : normal; 
+font-weight : 400; text-align : center; vertical-align : bottom }
+*.ee121 { background : #FBF6D5; color : windowtext; 
+font-family : Arial , sans-serif; font-size : 10.00pt; font-style : normal; 
+font-weight : 400; padding-left : 0px; padding-right : 1px; 
+padding-top : 0px; text-align : center; vertical-align : bottom }
+*.ee122 { background : #FBF6D5; color : windowtext; 
+font-family : Arial , sans-serif; font-size : 10.00pt; font-style : normal; 
+font-weight : 400; text-align : center; vertical-align : bottom }
+
+textarea {  overflow: auto; }
+</style>
+<style type="text/css" media="screen">
+.eebuttonbar_top {margin-bottom:6px;padding-bottom:6px;border-bottom: 2px solid blue}
+.eebuttonbar_bottom {margin-top:6px;padding-top:6px;border-top: 2px solid blue}
+.eetabs {display:block; font-family : Arial; font-size : 10.00pt}</style>
+<style type="text/css" media="print">
+.eebuttonbar_top {display:none;}
+.eebuttonbar_bottom {display:none;}
+.eetabs {display:none;}</style>
+<script language="javascript" type="text/javascript">
+ 
+
+var co = new Object;
+function recalc_onclick(ctl) {
+  if (true) {
+
+
+co.p1D4=eeparseFloat(document.formc.p1D4.value);calc(co);document.formc.p1D5.value=eedisplayFloatND(co.p1D5,1);document.formc.p1D6.value=eedisplayFloatND(co.p1D6,1);document.formc.p1D7.value=eedisplayFloatND(co.p1D7,1);document.formc.p1D8.value=eedisplayFloatND(co.p1D8,0);document.formc.p1D9.value=eedisplayFloatND(co.p1D9,0);document.formc.p1D10.value=eedisplayFloatND(co.p1D10,0);document.formc.p1D11.value=eedisplayFloatND(co.p1D11,0);document.formc.p1D12.value=eedisplayFloatND(co.p1D12,0);document.formc.p1D13.value=eedisplayFloatND(co.p1D13,1);document.formc.p1D14.value=eedisplayFloatND(co.p1D14,1);
+};};
+
+
+var eeisus=1;var eetrue="TRUE";var eefalse="FALSE";var eedec=".";var eeth=",";var eedecreg=new RegExp("\\.","g");var eethreg=new RegExp(",","g");var eecurrencyreg=new RegExp("[$]","g");var eepercentreg=new RegExp("%","g");
+
+function calc(data){var c1D4=data.p1D4;var c1C4=(2.0409999999999999);var c1C5=(198);var c1C6=(397);var c1C7=(237);var c1C8=(4);var c1C9=(2000);var c1C10=(4000);var c1C11=(200);var c1C12=(200);var c1C13=(8.4);var c1C14=(8);var c1D5=(((((c1D4)*(c1C5)))/(c1C4)));var c1D6=(((((c1D4)*(c1C6)))/(c1C4)));var c1D7=(((((c1D4)*(c1C7)))/(c1C4)));var c1D8=(((((c1D4)*(c1C8)))/(c1C4)));var c1D9=(((((c1D4)*(c1C9)))/(c1C4)));var c1D10=(((((c1D4)*(c1C10)))/(c1C4)));var c1D11=(((((c1D4)*(c1C11)))/(c1C4)));var c1D12=(((((c1D4)*(c1C12)))/(c1C4)));var c1D13=(((((c1D4)*(c1C13)))/(c1C4)));var c1D14=(((((c1D4)*(c1C14)))/(c1C4)));data.p1D5=c1D5;data.p1D6=c1D6;data.p1D7=c1D7;data.p1D8=c1D8;data.p1D9=c1D9;data.p1D10=c1D10;data.p1D11=c1D11;data.p1D12=c1D12;data.p1D13=c1D13;data.p1D14=c1D14;};
+
+ function myIsNaN(x){return(isNaN(x)||(typeof x=='number'&&!isFinite(x)));};function round(n,nd){if(isFinite(n)&&isFinite(nd)){var sign_n=(n<0)?-1:1;var abs_n=Math.abs(n);var factor=Math.pow(10,nd);return sign_n*Math.round(abs_n*factor)/factor;}else{return NaN;}};function eeparseFloat(str){str=String(str).replace(eedecreg,".");var res=parseFloat(str);if(isNaN(res)){return 0;}else{return res;}};var near0RegExp=new RegExp("[.](.*0000000|.*9999999)");function eedisplayFloat(x){if(myIsNaN(x)){return Number.NaN;}else{var str=String(x);if(near0RegExp.test(str)){x=round(x,8);str=String(x);}return str.replace(/\./g,eedec);}};function eedisplayFloatND(x,nd){if(myIsNaN(x)){return Number.NaN;}else{var res=round(x,nd);if(nd>0){var str=String(res);if(str.indexOf('e')!=-1)return str;if(str.indexOf('E')!=-1)return str;var parts=str.split('.');if(parts.length<2){var decimals=('00000000000000').substring(0,nd);return(parts[0]).toString()+eedec+decimals;}else{var decimals=((parts[1]).toString()+'00000000000000').substring(0,nd);return(parts[0]).toString()+eedec+decimals;}}else{return res;}}};
+</script>
+ 
+<!-- SpreadsheetConverter Header end -->
+<link href="chrome-extension://cjdnfmjmdligcpfcekfmenlhiopehjkd/web_resources/modal/modal.css" rel="stylesheet" id="__tmpStyle"></head>
+
+
+<body onload="initial_update();try{document.formc.p1D4.focus();document.formc.p1D4.select();}catch(err){};"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20211207192540/https://feline-nutrition.org/html_pages/Recipe_Calculator_Metric.html</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(700,27,25,2,"web","https://feline-nutrition.org/html_pages/Recipe_Calculator_Metric.html","20211207192540",1996,"/_static/",["/_static/css/banner-styles.css?v=S1zqJCYt","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+        <div style="display:none" id="sbbhscc"></div>
+          <script type="text/javascript">
+            var sbbvscc='';
+            var sbbgscc='';
+            function genPid() {return String.fromCharCode(119)+String.fromCharCode(74) ; };
+          </script>
+        <div id="sbbfrcc" style="position: absolute; top: -10px; left: 30px; font-size:1px"><iframe id="SBBCrossIframe" title="SBBCrossIframe" lang="en" aria-hidden="true" scrolling="NO" src="./Feline Nutrition Recipe Calculator Metric_files/saved_resource.html" style="visibility: hidden; border: 0px; height: 1px; width: 0px;" allow="autoplay &#39;self&#39;; fullscreen &#39;self&#39;"></iframe></div>
+  <script type="text/javascript">(function(XHR){var open=XHR.prototype.open;var send=XHR.prototype.send;var parser=document.createElement('a');XHR.prototype.open=function(method, url, async, user, pass){if(typeof async=='undefined'){async=true;}parser.href=url;if(parser.host==''){parser.href=parser.href;}this.ajax_hostname=parser.hostname;open.call(this, method, url, async, user, pass);};XHR.prototype.send=function(data){if(location.hostname==this.ajax_hostname)this.setRequestHeader("X-MOD-SBB-CTYPE", "xhr");send.call(this, data);}})(XMLHttpRequest);if(typeof(fetch)!="undefined"){var nsbbfetch=fetch;fetch=function(url, init){if(typeof(url)==="object" && typeof(url.url)==="string"){init={method: url.method, mode: url.mode, cache: url.cache, credentials: url.credentials, headers: url.headers, body: url.body};url=url.url;}function sbbSd(url, domain){var parser=document.createElement('a');parser.href=url;if(parser.host==''){parser.href=parser.href;}return parser.hostname==location.hostname;}if(sbbSd(url, document.domain)){init=typeof init !=='undefined' ? init :{};if(typeof(init.headers)==="undefined"){init.headers={};}init.headers['X-MOD-SBB-CTYPE']='fetch';}return nsbbfetch(url, init);};}function sbbgc(check_name){var start=document.cookie.indexOf(check_name+"=");var oVal='';var len=start+check_name.length+1;if((!start)&&(document.cookie.substring(0,check_name.length)!=check_name)){oVal='';}else if(start==-1){oVal='';}else{var end=document.cookie.indexOf(';',len);if(end==-1)end=document.cookie.length;var oVal=document.cookie.substring(len,end);};return oVal;}function addmg(inm,ext){var primgobj=document.createElement('IMG');primgobj.src=window.location.protocol+"//"+window.location.hostname+(window.location.port && window.location.port!=80 ? ':'+window.location.port: '')+"/sbbi/?sbbpg="+inm+(ext?"&"+ext:"");var sbbDiv=document.getElementById('sbbfrcc');sbbDiv.appendChild(primgobj);};function addprid(prid){var oldVal=sbbgc("PRLST");if((oldVal.indexOf(prid)==-1)&&(oldVal.split('/').length<5)){if(oldVal!=''){oldVal+='/';}document.cookie='PRLST='+oldVal+escape(prid)+';path=/; SameSite=Lax;';}}var sbbeccf=function(){this.sp3="jass";this.sf1=function(vd){return sf2(vd)+32;};var sf2=function(avd){return avd*12;};this.sf4=function(yavd){return yavd+2;};var strrp=function(str, key, value){if(str.indexOf('&'+key+'=')> -1 || str.indexOf(key+'=')==0){var idx=str.indexOf('&'+key+'=');if(idx==-1)idx=str.indexOf(key+'=');var end=str.indexOf('&', idx+1);var newstr;if(end !=-1)newstr=str.substr(0, idx)+str.substr(end+(idx ? 0 : 1))+'&'+key+'='+value;else newstr=str.substr(0, idx)+'&'+key+'='+value;return newstr;}else return str+'&'+key+'='+value;};var strgt=function(name, text){if(typeof text !='string')return "";var nameEQ=name+"=";var ca=text.split(/[;&]/);for(var i=0;i < ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1, c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length, c.length);}return "";};this.sfecgs={sbbgh:function(){var domain=document.location.host;if(domain.indexOf('www.')==0)domain=domain.replace('www.', '');return domain;}, f:function(name, value){var fv="";if(window.globalStorage){var host=this.sbbgh();try{if(typeof(value)!="undefined")globalStorage[host][name]=value;else{fv=globalStorage[host][name];if(typeof(fv.toString)!="undefined")fv=fv.toString();}}catch(e){}}return fv;}, name:"sbbrf"};this.sfecls={f:function(name, value){var fv="";try{if(window.localStorage){if(typeof(value)!="undefined")localStorage.setItem(name, value);else{fv=localStorage.getItem(name);if(typeof(fv.toString)!="undefined")fv=fv.toString();}}}catch(e){}return fv;}, name:"sbbrf"};this.sbbcv=function(invl){try{var invalArr=invl.split("-");if(invalArr.length>1){if(invalArr[0]=="A"||invalArr[0]=="D"){invl=invalArr[1];}else invl="";}if(invl==null||typeof(invl)=="undefined"||invl=="falseImgUT"||invl=="undefined"||invl=="null"||invl!=encodeURI(invl))invl="";if(typeof(invl).toLowerCase()=="string")if(invl.length>20)if(invl.substr(0,2)!="h4")invl="";}catch(ex){invl="";}return invl;};this.sbbsv=function(fv){for(var elm in this){if(this[elm].name=="sbbrf"){this[elm].f("altutgv2",fv);}}document.cookie="UTGv2="+fv+';expires=Sun, 05-Jun-22 19:25:40 GMT;path=/; SameSite=Lax;';};this.sbbgv=function(){var valArr=Array();var currVal="";for(var elm in this){if(this[elm].name=="sbbrf"){currVal=this[elm].f("altutgv2");currVal=this.sbbcv(currVal);if(currVal!="")valArr[currVal]=(typeof(valArr[currVal])!="undefined"?valArr[currVal]+1:1);}}var lb=0;var fv="";for(var val in valArr){if(valArr[val]>lb){fv=val;lb=valArr[val]}}if(fv=="")fv=sbbgc("UTGv2");fv=this.sbbcv(fv);if(fv!="")this.sbbsv(fv);else this.sbbsv("D-h466e7abff88bbf4504aced5233b11374186");return fv;};};function m2vr(m1,m2){var i=0;var rc="";var est="ghijklmnopqrstuvwyz";var rnum;var rpl;var charm1=m1.charAt(i);var charm2=m2.charAt(i);while(charm1!=""||charm2!=""){rnum=Math.floor(Math.random()* est.length);rpl=est.substring(rnum,rnum+1);rc+=(charm1==""?rpl:charm1)+(charm2==""?rpl:charm2);i++;charm1=m1.charAt(i);charm2=m2.charAt(i);}return rc;}function sbbls(prid){try{var eut=sbbgc("UTGv2");window.sbbeccfi=new sbbeccf();window.sbbgs=sbbeccfi.sbbgv();if(eut!=sbbgs && sbbgs!="" && typeof(sbbfcr)=="undefined"){addmg('utMedia',"vii="+m2vr("05e94417836bfbfe676307072854708b",sbbgs));}var sbbiframeObj=document.createElement('IFRAME');var dfx=new Date();sbbiframeObj.id='SBBCrossIframe';sbbiframeObj.title='SBBCrossIframe';sbbiframeObj.tabindex='-1';sbbiframeObj.lang='en';sbbiframeObj.style.visibility='hidden';sbbiframeObj.setAttribute('aria-hidden', 'true');sbbiframeObj.style.border='0px';if(document.all){sbbiframeObj.style.position='absolute';sbbiframeObj.style.top='-1px';sbbiframeObj.style.height='1px';sbbiframeObj.style.width='28px';}else{sbbiframeObj.style.height='1px';sbbiframeObj.style.width='0px';}sbbiframeObj.scrolling="NO";sbbiframeObj.src=window.location.protocol+"//"+window.location.hostname+(window.location.port && window.location.port!=80 ? ':'+window.location.port: '')+'/sbbi/?sbbpg=sbbShell&gprid='+prid + '&sbbgs='+sbbgs+'&ddl='+(Math.round(dfx.getTime()/1000)-1638905140)+'';var sbbDiv=document.getElementById('sbbfrcc');sbbDiv.appendChild(sbbiframeObj);}catch(ex){;}}try{var y=unescape(sbbvscc.replace(/^<\!\-\-\s*|\s*\-\->$/g,''));document.getElementById('sbbhscc').innerHTML=y;var x=unescape(sbbgscc.replace(/^<\!\-\-\s*|\s*\-\->$/g,''));}catch(e){x='function genPid(){return "jser";}';}try{if(window.gprid==undefined)document.write('<'+'script type="text/javascri'+'pt">'+x+"var gprid=genPid();addprid(gprid);sbbls(gprid);<"+"/script>");}catch(e){addprid("dwer");}</script><script type="text/javascript">var gprid=genPid();addprid(gprid);sbbls(gprid);</script>
+
+<!-- SpreadsheetConverter Body start -->
+
+<form id="formc" name="formc" method="post" action="https://web.archive.org/web/20211207192540/https://feline-nutrition.org/html_pages/Recipe_Calculator_Metric.html"> <div style="display:none"> 
+
+
+	
+	
+
+
+</div>
+
+	
+
+<div class="eebuttonbar_top">
+
+<input class="eebuttons" type="button" value="Update" name="xl_update_top" onclick="recalc_onclick(&#39;&#39;)">
+<input class="eebuttons" type="button" value="Reset" name="xl_reset_top" onclick="reset_onclick(&#39;&#39;)">
+
+<input class="eebuttons" type="button" value="Print" name="xl_print_top" onclick="window.print();">
+
+
+
+
+</div>
+
+
+<div id="panel1" style="display:block">
+<table width="497.00" style="border-collapse:collapse" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<colgroup><col width="64.00">
+<col width="216.00">
+<col width="77.00">
+<col width="76.00">
+<col width="64.00">
+</colgroup><tbody><tr style="height:13pt"> 
+<td class="ee100">&nbsp;
+
+</td>
+<td class="ee103">&nbsp;
+
+</td>
+<td class="ee103">&nbsp;
+
+</td>
+<td class="ee103">&nbsp;
+
+</td>
+<td class="ee103">&nbsp;
+
+</td>
+</tr>
+<tr style="height:18pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee109">
+<h1>Feline Nutrition Recipe Calculator Metric</h1>
+</td>
+<td class="ee106" colspan="3">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106" colspan="5">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Raw chicken thighs with bone
+</td>
+<td class="ee118">
+<input value="2" name="p1D4" id="p1D4" type="text" onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick(&#39;p1D4&#39;)" tabindex="1" style=" width:100% " class="ee120">
+</td>
+<td class="ee115">
+kg
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Raw chicken liver
+</td>
+<td class="ee121">
+<input value="0" name="p1D5" id="p1D5" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+g
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Raw chicken hearts
+</td>
+<td class="ee121">
+<input value="0" name="p1D6" id="p1D6" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+g
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Water
+</td>
+<td class="ee121">
+<input value="0" name="p1D7" id="p1D7" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+ml
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Raw egg yolks
+</td>
+<td class="ee121">
+<input value="0" name="p1D8" id="p1D8" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">&nbsp;
+
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Taurine
+</td>
+<td class="ee121">
+<input value="0" name="p1D9" id="p1D9" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+<span> </span>mg
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Salmon or Small Fish Oil
+</td>
+<td class="ee121">
+<input value="0" name="p1D10" id="p1D10" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+<span> </span>mg
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Vitamin E
+</td>
+<td class="ee121">
+<input value="0" name="p1D11" id="p1D11" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+<span> </span>IU
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Vitamin B Complex
+</td>
+<td class="ee121">
+<input value="0" name="p1D12" id="p1D12" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+<span> </span>mg
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Lite Iodized Salt
+</td>
+<td class="ee121">
+<input value="0" name="p1D13" id="p1D13" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+g
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee115">
+Psyllium Husk Powder (optional)
+</td>
+<td class="ee121">
+<input value="0" name="p1D14" id="p1D14" type="text" tabindex="-1" readonly="" style="overflow:hidden; border:0px solid #000000; width:100% " class="ee122">
+</td>
+<td class="ee115">
+g
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106" colspan="3">&nbsp;
+
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+<tr style="height:16pt"> 
+<td class="ee106" colspan="3">&nbsp;
+
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+<td class="ee106">&nbsp;
+
+</td>
+</tr>
+</tbody></table>
+<p></p>
+</div>
+ 
+<div class="eebuttonbar_bottom">
+
+<input class="eebuttons" type="button" value="Update" name="xl_update_bottom" onclick="recalc_onclick(&#39;&#39;)">
+<input class="eebuttons" type="button" value="Reset" name="xl_reset_bottom" onclick="reset_onclick(&#39;&#39;)">
+
+<input class="eebuttons" type="button" value="Print" name="xl_print_bottom" onclick="window.print();">
+
+
+
+<span style="margin-left:60px;"> <a href="https://web.archive.org/web/20211207192540/http://www.spreadsheetconverter.com/excel-html-web.htm" target="_blank" tabindex="-1"></a></span></div>
+
+ 
+<script language="javascript" type="text/javascript">
+ function reset_onclick(x){document.formc.reset();postcode();recalc_onclick('');};function postcode(){};function eequerystring(){var querystring=document.location.search;if(querystring.length>0){variables=(querystring.substring(1)).split("&");var variable;var key;var value;for(var ii=0;ii<variables.length;ii++){variable=variables[ii].split("=");key=unescape(variable[0]);value=unescape(variable[1]);if(document.formc[key]!=null){document.formc[key].value=value;}}}}function initial_update(){postcode('');eequerystring();recalc_onclick('');}
+</script>
+</form>
+
+
+<!-- SpreadsheetConverter Body end -->
+
+
+<noscript>The browser does not support JavaScript. The calculations created using  <a href="https://web.archive.org/web/20211207192540/http://www.spreadsheetconverter.com/poweredby.htm" target="_blank">SpreadsheetConverter</a>  will not work. Please access the web page using another browser.<p></p></noscript>
+
+
+
+<div>
+    <div id="twoseven-ext-tab-media-modal" class="twoseven-ext-tab-media-modal" style="display: none;">
+      <!-- Modal content -->
+      <div class="twoseven-ext-tab-media-modal-content">
+        <div class="iframe-container" style="height: 100%; width: 100%;">
+          <span class="close">×</span>
+        </div>
+      </div>
+    </div></div></body></html>
