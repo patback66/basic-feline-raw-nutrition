@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/basic-feline-raw-nutrition/static/css/main.f855e6bc.css",
+    "main.js": "/basic-feline-raw-nutrition/static/js/main.0ffebf10.js",
+    "static/js/453.7ca21a65.chunk.js": "/basic-feline-raw-nutrition/static/js/453.7ca21a65.chunk.js",
+    "index.html": "/basic-feline-raw-nutrition/index.html",
+    "main.f855e6bc.css.map": "/basic-feline-raw-nutrition/static/css/main.f855e6bc.css.map",
+    "main.0ffebf10.js.map": "/basic-feline-raw-nutrition/static/js/main.0ffebf10.js.map",
+    "453.7ca21a65.chunk.js.map": "/basic-feline-raw-nutrition/static/js/453.7ca21a65.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.0ffebf10.js"
+  ]
+}
