@@ -21,17 +21,17 @@ const ingredientMaps: Ingredient[] = [
     },
     {
         title: 'Second secreting organ',
-        ratio: 0.097,
+        ratio: 97,
         units: 'g'
     },
     {
         title: 'Raw chicken hearts',
-        ratio: 0.1945,
+        ratio: 194.5,
         units: 'g'
     },
     {
         title: 'Water',
-        ratio: 0.1161,
+        ratio: 116.1,
         units: 'ml'
     },
     {
@@ -41,12 +41,12 @@ const ingredientMaps: Ingredient[] = [
     },
     {
         title: 'Taurine',
-        ratio: 0.00098,
+        ratio: 980,
         units: 'mg'
     },
     {
         title: 'Salmon or fish oil',
-        ratio: 0.00196,
+        ratio: 1960,
         units: 'mg'
     },
     {
@@ -56,7 +56,7 @@ const ingredientMaps: Ingredient[] = [
     },
     {
         title: 'Vitamin B Complex',
-        ratio: 0.000098,
+        ratio: 98,
         units: 'mg'
     },
 ]
@@ -73,7 +73,7 @@ const IngredientForm: React.FC = () => {
         // Calculate the amounts for other ingredients based on the ratio
         const calculatedAmounts = ingredientMaps.map(ingredient => ({
             title: ingredient.title,
-            amount: (ingredient.ratio * inputAmount).toFixed(2)
+            amount: (ingredient.ratio * inputAmount).toFixed(1)
         }));
 
         setAmounts(calculatedAmounts);
