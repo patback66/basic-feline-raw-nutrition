@@ -16,7 +16,7 @@ const ingredientMaps: Ingredient[] = [
     },
     {
         title: 'Raw chicken liver',
-        ratio: 0.097,
+        ratio: 97,
         units: 'g'
     },
     {
@@ -63,7 +63,7 @@ const ingredientMaps: Ingredient[] = [
 
 // Main component
 const IngredientForm: React.FC = () => {
-    const [amount, setAmount] = useState<number>(0);
+    const [amount, setAmount] = useState<number>(1);
     const [amounts, setAmounts] = useState<{ title: string; amount: string }[]>([]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,7 +73,7 @@ const IngredientForm: React.FC = () => {
         // Calculate the amounts for other ingredients based on the ratio
         const calculatedAmounts = ingredientMaps.map(ingredient => ({
             title: ingredient.title,
-            amount: (ingredient.ratio * inputAmount).toFixed(2) + ' ' + ingredient.units
+            amount: (ingredient.ratio * inputAmount).toFixed(2)
         }));
 
         setAmounts(calculatedAmounts);
@@ -82,26 +82,34 @@ const IngredientForm: React.FC = () => {
     return (
         <div>
             <h1>Ingredient Calculator</h1>
-            <form>
-                <label>
-                    Amount of {ingredientMaps[0].title} ({ingredientMaps[0].units}):
-                    <input
-                        type="number"
-                        value={amount}
-                        onChange={handleChange}
-                        step="0.01"
-                    />
-                </label>
-            </form>
-
-            <h2>Calculated Amounts:</h2>
-            <ul>
-                {amounts.map((ingredient) => (
-                    <li key={ingredient.title}>
-                        {ingredient.title}: {ingredient.amount}
-                    </li>
-                ))}
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {ingredientMaps.map((ingredient, index) => (
+                        <tr key={ingredient.title}>
+                            <td>{ingredient.title}</td>
+                            <td>
+                                {index === 0 ? (
+                                    <input
+                                        type="number"
+                                        value={amount}
+                                        onChange={handleChange}
+                                        step="0.001"
+                                    />
+                                ) : (
+                                    amounts.find(a => a.title === ingredient.title)?.amount || '0'
+                                )}
+                            </td>
+                            <td>{ingredient.units}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 };

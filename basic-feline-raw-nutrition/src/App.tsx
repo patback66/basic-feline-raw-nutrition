@@ -1,12 +1,12 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {CalcTable} from './CalcTable.tsx'
+import IngredientForm from './IngredientForm';
 
 function App() {
   return (
     <div className="App">
-      {/* ... (rest of your JSX) */}
-      <CalcTable/>
+      <IngredientForm />
     </div>
   );
 }
