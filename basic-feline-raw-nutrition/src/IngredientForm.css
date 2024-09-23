@@ -1,0 +1,34 @@
+.ingredient-form {
+    border: 1px solid black;
+    width: 25%;
+    max-width: 500px;
+    margin: 5em;
+    padding: 0;
+}
+
+.ingredient-form h1 {
+    text-align: center;
+}
+
+.ingredient-form table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ingredient-form th, .ingredient-form td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.ingredient-form th {
+    background-color: #f2f2f2;
+}
+
+.ingredient-form tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.ingredient-form tr:nth-child(odd) {
+    background-color: white;
+}

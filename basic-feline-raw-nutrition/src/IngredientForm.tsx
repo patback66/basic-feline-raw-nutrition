@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './IngredientForm.css';
 
 // Define the ingredient type
 interface Ingredient {
@@ -80,13 +81,14 @@ const IngredientForm: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="ingredient-form">
             <h1>Ingredient Calculator</h1>
             <table>
                 <thead>
                     <tr>
                         <th>Ingredient</th>
                         <th>Amount</th>
+                        <th>Units</th>
                     </tr>
                 </thead>
                 <tbody>
