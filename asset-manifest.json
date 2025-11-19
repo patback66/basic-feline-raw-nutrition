@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/basic-feline-raw-nutrition/static/css/main.4d5eb43e.css",
-    "main.js": "/basic-feline-raw-nutrition/static/js/main.b4ccaa77.js",
+    "main.css": "/basic-feline-raw-nutrition/static/css/main.e092b9e5.css",
+    "main.js": "/basic-feline-raw-nutrition/static/js/main.da163eaa.js",
     "static/js/453.7ca21a65.chunk.js": "/basic-feline-raw-nutrition/static/js/453.7ca21a65.chunk.js",
     "index.html": "/basic-feline-raw-nutrition/index.html",
-    "main.4d5eb43e.css.map": "/basic-feline-raw-nutrition/static/css/main.4d5eb43e.css.map",
-    "main.b4ccaa77.js.map": "/basic-feline-raw-nutrition/static/js/main.b4ccaa77.js.map",
+    "main.e092b9e5.css.map": "/basic-feline-raw-nutrition/static/css/main.e092b9e5.css.map",
+    "main.da163eaa.js.map": "/basic-feline-raw-nutrition/static/js/main.da163eaa.js.map",
     "453.7ca21a65.chunk.js.map": "/basic-feline-raw-nutrition/static/js/453.7ca21a65.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d5eb43e.css",
-    "static/js/main.b4ccaa77.js"
+    "static/css/main.e092b9e5.css",
+    "static/js/main.da163eaa.js"
   ]
 }
