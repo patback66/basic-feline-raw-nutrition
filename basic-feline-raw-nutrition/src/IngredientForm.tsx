@@ -119,7 +119,7 @@ const IngredientForm: React.FC = () => {
                             if (activeInputTitle === ingredient.title) {
                                 valueToShow = activeInputValue;
                             } else {
-                                valueToShow = baseFactor === 0 ? '' : parseFloat(displayAmount.toFixed(3)).toString();
+                                valueToShow = baseFactor === 0 ? '' : parseFloat(displayAmount.toFixed(2)).toString();
                             }
 
                             return (
@@ -132,7 +132,7 @@ const IngredientForm: React.FC = () => {
                                             type="number"
                                             value={valueToShow}
                                             onChange={(e) => handleAmountChange(ingredient.ratio, e.target.value, ingredient.title)}
-                                            onFocus={() => handleFocus(ingredient.title, baseFactor === 0 ? '' : parseFloat(displayAmount.toFixed(3)).toString())}
+                                            onFocus={() => handleFocus(ingredient.title, baseFactor === 0 ? '' : parseFloat(displayAmount.toFixed(2)).toString())}
                                             onBlur={handleBlur}
                                             step="any"
                                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow duration-200"
