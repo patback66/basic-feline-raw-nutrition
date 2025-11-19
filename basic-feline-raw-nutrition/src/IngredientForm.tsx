@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './IngredientForm.css';
+import React, { useState } from 'react';
+
 
 // Define the ingredient type
 interface Ingredient {
@@ -81,37 +81,48 @@ const IngredientForm: React.FC = () => {
     };
 
     return (
-        <div className="ingredient-form">
-            <h1>Ingredient Calculator</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ingredient</th>
-                        <th>Amount</th>
-                        <th>Units</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {ingredientMaps.map((ingredient, index) => (
-                        <tr key={ingredient.title}>
-                            <td>{ingredient.title}</td>
-                            <td>
-                                {index === 0 ? (
-                                    <input
-                                        type="number"
-                                        value={amount}
-                                        onChange={handleChange}
-                                        step="0.001"
-                                    />
-                                ) : (
-                                    amounts.find(a => a.title === ingredient.title)?.amount || '0'
-                                )}
-                            </td>
-                            <td>{ingredient.units}</td>
+        <div className="max-w-2xl mx-auto my-20 bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <h1 className="text-center text-2xl font-bold py-6 bg-gray-50 border-b border-gray-200 text-gray-800">Ingredient Calculator</h1>
+            <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                    <thead>
+                        <tr className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                            <th className="py-3 px-6 font-semibold">Ingredient</th>
+                            <th className="py-3 px-6 font-semibold">Amount</th>
+                            <th className="py-3 px-6 font-semibold">Units</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody className="text-gray-600 text-sm font-light">
+                        {ingredientMaps.map((ingredient, index) => (
+                            <tr key={ingredient.title} className="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                                <td className="py-3 px-6 text-left whitespace-nowrap font-medium">
+                                    {ingredient.title}
+                                </td>
+                                <td className="py-3 px-6 text-left">
+                                    {index === 0 ? (
+                                        <input
+                                            type="number"
+                                            value={amount}
+                                            onChange={handleChange}
+                                            step="0.001"
+                                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow duration-200"
+                                        />
+                                    ) : (
+                                        <span className="font-bold text-gray-700">
+                                            {amounts.find(a => a.title === ingredient.title)?.amount || '0'}
+                                        </span>
+                                    )}
+                                </td>
+                                <td className="py-3 px-6 text-left">
+                                    <span className="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">
+                                        {ingredient.units}
+                                    </span>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };
