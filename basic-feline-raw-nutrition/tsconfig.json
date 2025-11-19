@@ -22,6 +22,7 @@
   },
   "include": [
     "src",
-    "test/IngredientForm.test.tsx"
+    "test/IngredientForm.test.tsx",
+    "eslint.config.mjs"
   ]
 }

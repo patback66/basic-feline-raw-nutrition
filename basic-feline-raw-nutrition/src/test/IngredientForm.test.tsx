@@ -17,7 +17,7 @@ describe('IngredientForm', () => {
         expect(chickenInput).toBeInTheDocument();
 
         // Liver should be 97 * 1 = 97
-        const liverRow = screen.getByText('Raw chicken liver').closest('tr');
+        const liverRow = screen.getByText('Raw chicken liver').closest('[role="row"]');
         const liverInput = liverRow?.querySelector('input');
         if (!liverInput) throw new Error('Liver input not found');
         expect(liverInput).toHaveValue(97);
@@ -26,7 +26,7 @@ describe('IngredientForm', () => {
     test('updates calculations when base ingredient changes', () => {
         render(<IngredientForm />);
 
-        const chickenRow = screen.getByText('Raw chicken thighs with bone').closest('tr');
+        const chickenRow = screen.getByText('Raw chicken thighs with bone').closest('[role="row"]');
         const chickenInput = chickenRow?.querySelector('input');
 
         if (!chickenInput) throw new Error('Chicken input not found');
@@ -35,7 +35,7 @@ describe('IngredientForm', () => {
         fireEvent.change(chickenInput, { target: { value: '2' } });
 
         // Verify Liver updates to 97 * 2 = 194
-        const liverRow = screen.getByText('Raw chicken liver').closest('tr');
+        const liverRow = screen.getByText('Raw chicken liver').closest('[role="row"]');
         const liverInput = liverRow?.querySelector('input');
         if (!liverInput) throw new Error('Liver input not found');
         expect(liverInput).toHaveValue(194);
@@ -44,7 +44,7 @@ describe('IngredientForm', () => {
     test('updates calculations when a secondary ingredient changes (reverse calculation)', () => {
         render(<IngredientForm />);
 
-        const liverRow = screen.getByText('Raw chicken liver').closest('tr');
+        const liverRow = screen.getByText('Raw chicken liver').closest('[role="row"]');
         const liverInput = liverRow?.querySelector('input');
 
         if (!liverInput) throw new Error('Liver input not found');
@@ -53,7 +53,7 @@ describe('IngredientForm', () => {
         fireEvent.change(liverInput, { target: { value: '194' } });
 
         // Verify Chicken Thighs updates to 2
-        const chickenRow = screen.getByText('Raw chicken thighs with bone').closest('tr');
+        const chickenRow = screen.getByText('Raw chicken thighs with bone').closest('[role="row"]');
         const chickenInput = chickenRow?.querySelector('input');
         if (!chickenInput) throw new Error('Chicken input not found');
         expect(chickenInput).toHaveValue(2);
@@ -62,7 +62,7 @@ describe('IngredientForm', () => {
     test('preserves input precision while typing', () => {
         render(<IngredientForm />);
 
-        const chickenRow = screen.getByText('Raw chicken thighs with bone').closest('tr');
+        const chickenRow = screen.getByText('Raw chicken thighs with bone').closest('[role="row"]');
         const chickenInput = chickenRow?.querySelector('input');
 
         if (!chickenInput) throw new Error('Chicken input not found');
@@ -81,7 +81,7 @@ describe('IngredientForm', () => {
     test('displays values with 3 decimal precision', () => {
         render(<IngredientForm />);
 
-        const chickenRow = screen.getByText('Raw chicken thighs with bone').closest('tr');
+        const chickenRow = screen.getByText('Raw chicken thighs with bone').closest('[role="row"]');
         const chickenInput = chickenRow?.querySelector('input');
 
         if (!chickenInput) throw new Error('Chicken input not found');
@@ -90,9 +90,9 @@ describe('IngredientForm', () => {
         fireEvent.change(chickenInput, { target: { value: '1.1234' } });
 
         // Liver ratio is 97. 1.1234 * 97 = 108.9698
-        // Should round to 108.97 (3 decimals, trailing zeros removed by parseFloat)
+        // Should round to 108.97 (2 decimals, trailing zeros removed by parseFloat)
 
-        const liverRow = screen.getByText('Raw chicken liver').closest('tr');
+        const liverRow = screen.getByText('Raw chicken liver').closest('[role="row"]');
         const liverInput = liverRow?.querySelector('input');
 
         if (!liverInput) throw new Error('Liver input not found');
@@ -100,4 +100,3 @@ describe('IngredientForm', () => {
         expect(liverInput).toHaveValue(108.97);
     });
 });
-
