@@ -64,20 +64,37 @@ const ingredientMaps: Ingredient[] = [
 
 // Main component
 const IngredientForm: React.FC = () => {
-    const [amount, setAmount] = useState<number>(1);
-    const [amounts, setAmounts] = useState<{ title: string; amount: string }[]>([]);
+    // baseFactor represents the multiplier for the entire recipe.
+    // Initially 1, corresponding to 1 unit of the first ingredient (ratio 1).
+    const [baseFactor, setBaseFactor] = useState<number>(1);
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const inputAmount = parseFloat(event.target.value);
-        setAmount(inputAmount);
+    // Track the currently active input to preserve user's typing (e.g. "2.0")
+    const [activeInputTitle, setActiveInputTitle] = useState<string | null>(null);
+    const [activeInputValue, setActiveInputValue] = useState<string>('');
 
-        // Calculate the amounts for other ingredients based on the ratio
-        const calculatedAmounts = ingredientMaps.map(ingredient => ({
-            title: ingredient.title,
-            amount: (ingredient.ratio * inputAmount).toFixed(1)
-        }));
+    const handleAmountChange = (ratio: number, value: string, title: string) => {
+        // Always update the active input value directly to what the user typed
+        if (title === activeInputTitle) {
+            setActiveInputValue(value);
+        }
 
-        setAmounts(calculatedAmounts);
+        const inputAmount = parseFloat(value);
+        if (!isNaN(inputAmount)) {
+            // Calculate the new base factor: value / ratio
+            setBaseFactor(inputAmount / ratio);
+        } else if (value === '') {
+            setBaseFactor(0);
+        }
+    };
+
+    const handleFocus = (title: string, currentAmount: string) => {
+        setActiveInputTitle(title);
+        setActiveInputValue(currentAmount);
+    };
+
+    const handleBlur = () => {
+        setActiveInputTitle(null);
+        setActiveInputValue('');
     };
 
     return (
@@ -93,33 +110,42 @@ const IngredientForm: React.FC = () => {
                         </tr>
                     </thead>
                     <tbody className="text-gray-600 text-sm font-light">
-                        {ingredientMaps.map((ingredient, index) => (
-                            <tr key={ingredient.title} className="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
-                                <td className="py-3 px-6 text-left whitespace-nowrap font-medium">
-                                    {ingredient.title}
-                                </td>
-                                <td className="py-3 px-6 text-left">
-                                    {index === 0 ? (
+                        {ingredientMaps.map((ingredient) => {
+                            // Calculate display amount based on current baseFactor
+                            const displayAmount = (ingredient.ratio * baseFactor);
+
+                            // Determine what to show: active input value or calculated formatted value
+                            let valueToShow: string | number;
+                            if (activeInputTitle === ingredient.title) {
+                                valueToShow = activeInputValue;
+                            } else {
+                                valueToShow = baseFactor === 0 ? '' : parseFloat(displayAmount.toFixed(3)).toString();
+                            }
+
+                            return (
+                                <tr key={ingredient.title} className="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                                    <td className="py-3 px-6 text-left whitespace-nowrap font-medium">
+                                        {ingredient.title}
+                                    </td>
+                                    <td className="py-3 px-6 text-left">
                                         <input
                                             type="number"
-                                            value={amount}
-                                            onChange={handleChange}
-                                            step="0.001"
+                                            value={valueToShow}
+                                            onChange={(e) => handleAmountChange(ingredient.ratio, e.target.value, ingredient.title)}
+                                            onFocus={() => handleFocus(ingredient.title, baseFactor === 0 ? '' : parseFloat(displayAmount.toFixed(3)).toString())}
+                                            onBlur={handleBlur}
+                                            step="any"
                                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow duration-200"
                                         />
-                                    ) : (
-                                        <span className="font-bold text-gray-700">
-                                            {amounts.find(a => a.title === ingredient.title)?.amount || '0'}
+                                    </td>
+                                    <td className="py-3 px-6 text-left">
+                                        <span className="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">
+                                            {ingredient.units}
                                         </span>
-                                    )}
-                                </td>
-                                <td className="py-3 px-6 text-left">
-                                    <span className="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-xs">
-                                        {ingredient.units}
-                                    </span>
-                                </td>
-                            </tr>
-                        ))}
+                                    </td>
+                                </tr>
+                            );
+                        })}
                     </tbody>
                 </table>
             </div>
